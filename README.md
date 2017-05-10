@@ -23,7 +23,7 @@ if err != nil {
 }
 
 // Wrap the ssh.Client in contextual.Dialer to get DialContext
-conn, err := contexual.Dialer{client}.DialContext(ctx, "tcp", "otherserver.com:12345")
+conn, err := contextual.Dialer{client}.DialContext(ctx, "tcp", "otherserver.com:12345")
 if err != nil {
     return err // Could be context.DeadlineExceeded or context.Canceled
 }
